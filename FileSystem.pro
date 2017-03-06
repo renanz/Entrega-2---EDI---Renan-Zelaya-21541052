@@ -18,15 +18,13 @@ SOURCES += main.cpp\
     Lista_Apuntador.cpp \
     folder.cpp \
     archivo.cpp \
-    archivoTexto.cpp \
-    files.cpp
+    archivoTexto.cpp
 
 HEADERS  += mainwindow.h \
     fileExplorer.h \
     Lista_Apuntador.h \
     folder.h \
     archivo.h \
-    archivoTexto.h \
-    files.h
+    archivoTexto.h
 
 FORMS    += mainwindow.ui

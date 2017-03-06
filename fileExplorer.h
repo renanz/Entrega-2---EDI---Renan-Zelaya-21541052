@@ -3,6 +3,8 @@
 #include "folder.h"
 #include "archivoTexto.h"
 #include <typeinfo>
+#include <QtGlobal>
+#include <QString>
 
 using namespace std;
 

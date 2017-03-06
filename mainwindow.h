@@ -15,6 +15,7 @@
 #include <QApplication>
 #include <QGraphicsView>
 #include <QGraphicsRectItem>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -41,6 +42,8 @@ public:
 
         void on_actionSalir_triggered();
 
+        void handleButton();
+
 private:
     Ui::MainWindow *ui;
     void graphicsView();
@@ -48,6 +51,7 @@ private:
     void dibujar(folder *subRaiz, QString nombre, int tipo, int xPos, int yPos);
     folder * root;
     folder * selected;
+    QString n;
     fileExplorer *explorer;
 };
 

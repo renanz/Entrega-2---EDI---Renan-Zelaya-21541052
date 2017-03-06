@@ -123,30 +123,15 @@ void fileExplorer::dir(folder * subRaiz,string space)
 }
 void fileExplorer::seed()
 {
-    archivo * t3 = crearArchivo(raiz,"archivo3",1);
-    archivo * f1 = crearArchivo(raiz,"folder1",0);
-    archivo * f2 = crearArchivo(raiz,"folder2",0);
-    archivo * t1 = crearArchivo(raiz,"archivo1",1);
-    archivo * t2 = crearArchivo(raiz,"archivo2",1);
-    archivo * f3 = crearArchivo((folder*)f1,"folder1_1",0);
-    archivo * f4 = crearArchivo((folder*)f3,"folder1_1_3",0);
-
-    dir();
-
-    archivo * cargar = cargarArchivo(t3->getRuta());
-    cout<<cargar->getNombre()<<cargar->getTipo()<<endl;
-
-    eliminarArchivo(t2->getRuta());
-
-    dir();
-
-    copiar(getRaiz(),t1->getNombre(),(folder*)f4);
-
-    dir();
-
-    cortar((folder*)f4,t1->getNombre(),(folder *)f3);
-
-    dir();
+    int rand;
+    QString name;
+    for (int x=0; x<23; x++ )
+    {
+        rand = (qrand() % 4) % 2;
+        (rand == 0 ? name="Folder" : name="Archivo");
+        name+=QString::number(x);
+        crearArchivo(raiz,name.toStdString(),rand);
+    }
 }
 
 folder * fileExplorer::getRaiz()
